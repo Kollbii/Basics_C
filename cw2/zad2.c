@@ -39,12 +39,11 @@ int main(void){
                     break;
                 }
             }
-            
             if(counter != 0){
                 printf("%d, ", i);
             }
         }
     }
     
-
+    
 }
