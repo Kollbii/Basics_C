@@ -2,18 +2,10 @@
 #include <string.h>
 
 int main(void){
-    
-    // printf ("%c, %c", a, b);
 
-    char string[255];
+    char string[255],a, b;
     gets(string);
-    // scanf("%s", &string);
-    // fgets(string, sizeof(string), stdin);
-
-    // scanf ("%[^\n]%*c", string);
-    // scanf("%[^\n]s",&string);
-
-    char a,b;
+    
     scanf("%c %c",&a, &b);
 
     for (int i = 0; i < 255; i++){
@@ -27,7 +19,6 @@ int main(void){
             continue;
         }
     }
-    // puts(string);
     printf ("%s", string);
     return 0;
 

@@ -19,7 +19,6 @@ int main(void){
     printf("Enter the number to convert: ");
     scanf("%d\n", &n);
     convertToBinary(n);
-    // printf("%d", 5&4);
     return 0;  
 }  
 

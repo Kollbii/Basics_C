@@ -5,13 +5,6 @@ int main(void){
     char c; char string[255];
     int num;
 
-    // Ta druga opcja ze scanfem i jakimś regexem
-
-    // printf("String by scanf: ");
-
-    // scanf("%s", &string);
-    // scanf("%[^\n]%*c", &string);
-    // printf("Input: %s",string);
     printf("Your text: ");
     gets(string);
     printf("%s\n\n", string);

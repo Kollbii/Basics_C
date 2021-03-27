@@ -17,7 +17,6 @@ int main(void){
     for (int i = 0; string[i] != '\0' ; i++){
         printf("%d ", string[i]);
         currentChar = string[i];
-
         if (string[i] >= 65 && string[i] <= 90){
             currentChar = ( currentChar + key - 65 ) % 26 + 65;
         } else if (string[i] >= 97 && string[i] <= 122){

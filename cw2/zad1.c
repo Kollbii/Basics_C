@@ -24,9 +24,7 @@ int main(void){
         if(sum == i){
             printf("%d PERFECT\n", i);
             counter += 1;
-        }//else{
-            // printf("%d NOT PERFECT\n", i); //Optional print
-        // }
+        }
     }
     printf("Total perfect numbers: %d", counter);
     return 0;
