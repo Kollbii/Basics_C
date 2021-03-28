@@ -7,6 +7,7 @@ int i, j, height= 30, width = 30, gameover = 0, score;
 int x, y, fruitx, fruity, flag;
 void draw() {
     system("cls");
+    printf("\t\t\t SCORE %d");
     for (i = 0; i < height; i++){
         for (j = 0; j < width; j++){
             if (i == 0 || i == width - 1 || j == 0 || j == height - 1){
@@ -128,6 +129,7 @@ int main(void){
         input();
         logic();
     }
+
 
     printf("Lost and gained %d points", score);
 

@@ -3,6 +3,13 @@
         "type_traits": "c",
         "time.h": "c",
         "algorithm": "c",
-        "random": "c"
+        "random": "c",
+        "stdio.h": "c",
+        "array": "c",
+        "functional": "c",
+        "istream": "c",
+        "ostream": "c",
+        "tuple": "c",
+        "utility": "c"
     }
 }

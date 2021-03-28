@@ -47,10 +47,8 @@ void quick_sort(int arr[ARRSIZE], int floor, int roof){
         j = roof;
 
         while (i < j){
-            while (arr[i] <= arr[pivot] && i < roof)
-                i++;
-            while (arr[j] > arr[pivot])
-                j--;
+            while (arr[i] <= arr[pivot] && i < roof) i++;
+            while (arr[j] > arr[pivot]) j--;
             if (i < j) {
                 tmp = arr[j];
                 arr[j] = arr[i];
@@ -127,7 +125,7 @@ int main(void){
     nout = one_two(t1, n1, t2, n2, out);
     printf("\nMerged array of size %d\n", nout);
     printarr(out, nout);
-    printf("\nSorted array\n");
+    printf("\nSorted array of size %d\n", nout);
     quick_sort(out, 0, nout - 1);
     printarr(out, nout);
     printf("\nDeleted duplicates\n");
