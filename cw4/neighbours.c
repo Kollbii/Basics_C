@@ -2,8 +2,6 @@
 #include <stdio.h>
 #include <time.h>
 
-#define ARRMAX 256 
-
 void printArr2D(int **arr, int n){
     for (int i = 0; i < n ; i++){
         for (int j = 0; j < n; j++){
@@ -14,20 +12,15 @@ void printArr2D(int **arr, int n){
 
 int sumOfNeighbours(int **arr, int i, int j, int r, int n){
     int sum = 0;
-    // printf("%d %d executed with\n", i, j);
     for (int k = (i - r); k < (r + i + 1); k++){
         for (int l = (j - r); l < (r + j + 1); l++){
-            // printf("%d %d\t",k , l);
             if (k >= 0 && k < n && l >= 0 && l < n){
-                // printf("added\n");
                 if(arr[k][l] == 1){
                     sum += 1;
                 }
-                // printf("current sum %d\n", sum);
             }
         }
     }
-    // return rand()%10; //test
     return sum;
 }
 
