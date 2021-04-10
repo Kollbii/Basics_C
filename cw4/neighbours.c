@@ -13,9 +13,22 @@ void printArr2D(int **arr, int n){
 }
 
 int sumOfNeighbours(int **arr, int i, int j, int r, int n){
-    int res;
-    res = rand()%20;
-    return res;
+    int sum = 0;
+    // printf("%d %d executed with\n", i, j);
+    for (int k = (i - r); k < (r + i + 1); k++){
+        for (int l = (j - r); l < (r + j + 1); l++){
+            // printf("%d %d\t",k , l);
+            if (k >= 0 && k < n && l >= 0 && l < n){
+                // printf("added\n");
+                if(arr[k][l] == 1){
+                    sum += 1;
+                }
+                // printf("current sum %d\n", sum);
+            }
+        }
+    }
+    // return rand()%10; //test
+    return sum;
 }
 
 int main(void){
@@ -48,31 +61,22 @@ int main(void){
         }
 	}
 
-    printf("Array with random placed {0, 1} of size %d\n\n", (int)n);
+    printf("\nArray with random placed {0, 1} of size %d\n\n", (int)n);
     printArr2D(arr, (int)n);
+
+    printf("\n\nCalculated neighbours\n\n");
 
     int **sum_of_neighbours = (int**)malloc(sizeof(int*)*n);
 	int *len_of_neighbours = (int*)malloc(sizeof(int)*n);
-    int sum, start_i, start_j;
+
     for (int i = 0; i < n; i++){
         sum_of_neighbours[i] = (int*)malloc(sizeof(int)*n);
         for (int j = 0; j < n; j++){
-            // for each element <arr[i][j]> calculate sum of all 1
-            // find first index that is ok to iterate, then sum
-            start_i = i - r;
-            start_j = j - r;
-            if ( (start_i > 0 && start_i < n) && (start_j > 0 && start_j < n)){
-                sum += arr[start_i][start_j];
-                // printf(" %d", sum);
-            }
-            
-            // sum_of_neighbours[i][j] = sumOfNeighbours(arr, i, j, r, (int)n);
-            sum_of_neighbours[i][j] = sum;
+            sum_of_neighbours[i][j] = sumOfNeighbours(arr, i, j, r, (int)n);
+            printf("%d  ", sum_of_neighbours[i][j]);
         }
+        printf("\n");
     }
-
-    printf("Calculated neighbours\n\n");
-    printArr2D(sum_of_neighbours, (int)n);
 
     free(arr);
     free(len);
