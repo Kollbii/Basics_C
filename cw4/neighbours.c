@@ -40,7 +40,6 @@ int main(void){
     srand((unsigned long)time(&t));
 
 	int **arr = (int**)malloc(sizeof(int*)*n);
-	int *len = (int*)malloc(sizeof(int)*n);
 
 	for (int i = 0; i < n; i++) {
         //Error handling (?)
@@ -60,7 +59,6 @@ int main(void){
     printf("\n\nCalculated neighbours\n\n");
 
     int **sum_of_neighbours = (int**)malloc(sizeof(int*)*n);
-	int *len_of_neighbours = (int*)malloc(sizeof(int)*n);
 
     for (int i = 0; i < n; i++){
         sum_of_neighbours[i] = (int*)malloc(sizeof(int)*n);
@@ -72,8 +70,6 @@ int main(void){
     }
 
     free(arr);
-    free(len);
 
     free(sum_of_neighbours);
-    free(len_of_neighbours);
 }
