@@ -15,8 +15,10 @@ int main(void){
         for (int j = 0; j <= len; j++){
             tmp = (arr[j]*i) + tmp;
             arr[j] = tmp%10;
+            printf("arr[%d] = %d\n",j ,tmp%10);
             tmp /= 10;
         }
+        printf("\n");
 
         while(tmp > 0){
             len+=1;
