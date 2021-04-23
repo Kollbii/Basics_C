@@ -110,76 +110,22 @@ void heap_increase_key(int *arr, int i, int key){
 }
 
 int main(void){
-    int option;
-
     //Driver code
     system("cls");
-    printf("What do you want to do?\n[1] - print and heap all arrays\n[2] - build max heap on all arays\n[3] - max heap insert on all arrays\n>");
-    scanf("%d", &option);
     int arr0[9] = {5, 13, 2, 25, 7, 17, 20, 8, 4};
     int arr1[12] = {1,3,1,2,7,9,1,6,1,0,4,2};
     int arr2[21] = {15,3,99,1,25,7,9,9,1,100,6,1,0,12,4,2,9,0,87,122,54};
     int arr3[14] = {0,12,4,2,9,0,87,122,54,1,2,11,55,99};
     int arr4[12] = {15, 13, 9, 5, 12,8,7,4,0,6,2,1};
 
-    switch (option)
-    {
-    case 1:
-        system("cls");
-        print_and_heap(arr0, 9);
-        printf("\n\n");
-        print_and_heap(arr1, 12);
-        printf("\n\n");
-        print_and_heap(arr2, 21);
-        printf("\n\n");
-        print_and_heap(arr3, 14);
-        printf("\n\n");
-        print_and_heap(arr4, 12);
-        break;
-    case 2:
-        system("cls");
-        build_max_heap(arr0, 9);
-        printf("\n\n");
-        build_max_heap(arr1, 12);
-        printf("\n\n");
-        build_max_heap(arr2, 21);
-        printf("\n\n");
-        build_max_heap(arr3, 14);
-        printf("\n\n");
-        build_max_heap(arr4, 12);
-        break;
-    case 3:
-        //TODO
-        printf("#TODO");
-        break; 
-    default:
-        break;
-    }
-
-    // build_max_heap(arrExtractMax, 12);
-
-    // for (int i = 0; i < 12; i++){
-    //     i + 1 == 12 ? printf("%d\n", arrExtractMax[i]) : printf("%d ", arrExtractMax[i]);
-    // }
-
-    // printf("Max heap insert (ARR, 10)\n");
-    // max_heap_insert(arrExtractMax, 12, 10);
-
-    // for (int i = 0; i < 13; i++){
-    //     i + 1 == 13 ? printf("%d\n", arrExtractMax[i]) : printf("%d ", arrExtractMax[i]);
-    // }
-
-    // print_and_heap(arr0, 9);
-    // printf("Max element: %d\n", heap_extract_max(arr0, 9));
-
-    // for (int i = 0; i < 8 ; i++){
-    //     i + 1 == 8 ? printf("%d\n", arr0[i]) : printf("%d ", arr0[i]);
-    // }
-
-
-    // print_and_heap(arr1, 12);
-    // printf("\n\n");
-    // print_and_heap(arr2, 21);
-    // printf("\n\n");
-    // print_and_heap(arr3, 14);
+   
+    print_and_heap(arr0, 9);
+    printf("\n\n");
+    print_and_heap(arr1, 12);
+    printf("\n\n");
+    print_and_heap(arr2, 21);
+    printf("\n\n");
+    print_and_heap(arr3, 14);
+    printf("\n\n");
+    print_and_heap(arr4, 12);
 }

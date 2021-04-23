@@ -1,26 +1,24 @@
+// recursive function to return first odd number in given number or -1 if it has no even number
 #include <stdio.h>
 #include <stdlib.h>
 
-int answer;
-
-int funkcja(int x){
-    int a, b;
-    a = x%10;
-    b = x/10;
-    if (a%2 != 0){
-        answer = a;
-        // return a;
+int func(int x){
+    if ((x%10)%2 != 0){
+        // printf("%d jest znaleziona liczba nieparzysta\n", x%10); //Może koniec tutaj bo "pierwsza" ale od końca (?)
+        return x%10;
     } else {
-        funkcja(b);
+        if (x/10 == 0 ){
+            return -1;
+        } else {
+            return func(x/10);
+        }
     }
-    return -1;
 }
 
 int main(void) {
     int x;
-    printf("Podaj liczbe: ");
+    printf("Insert num: ");
     scanf("%d", &x);
     
-    funkcja(x);
-    printf("%d", answer);
+    printf("%d ",func(x));
 }
