@@ -18,27 +18,34 @@ Wyjscie:
 
 Wejscie:
 3
--1 -2 1 2
--2 -1 2 1
--2 1 2 2
+-3 -3 1 3
+-4 2 2 4
+-1 -5 -1 5
 Wyjscie:
-8
+26
 */
 
 int main(void){
     int rectangles;
     int x1,x2,y1,y2;
+    int k = 0, blacks = 0;
 
     printf(">");
     scanf("%d", &rectangles);
     
+    /*
+        I translate the (0,0) to (n/2,n/2) [lines 57-61]
+        in order to maintain >= 0 indexes in array.
+    */
 
-    int **arrOfPoints = (int**)malloc(sizeof(int*)*(unsigned)100); // 100 x 100 possible points with x and y cooridinates
-	for (int i = 0; i < 100; i++) {
-		arrOfPoints[i] = (int*)malloc(sizeof(int));
+    int **arrOfPoints = (int**)malloc(sizeof(int*)*(unsigned)200);
+	for (int i = 0; i < 200; i++) {
+		arrOfPoints[i] = (int*)malloc(sizeof(int)*(unsigned)200);
+        for (int j = 0; j < 200; j++){
+            arrOfPoints[i][j] = 0; // initialize with white squares as 0
+        }
     }
 
-    int j = 0;
     for (int i = 0; i < rectangles; i++){
         scanf("%d %d %d %d", &x1, &y1, &x2, &y2);
         for (int x = x1; x <=  x2 ; x++){
@@ -47,31 +54,24 @@ int main(void){
                     continue;
                 }
 
-                arrOfPoints[j][0] = x;
-                arrOfPoints[j][1] = y;
-                j++;   
+                if (arrOfPoints[x + 100][y + 100] == 0){
+                    arrOfPoints[x + 100][y + 100] += 1; // if white square change to black again
+                } else if (arrOfPoints[x + 100][y + 100] == 1){
+                    arrOfPoints[x + 100][y + 100] -= 1; // if black square change to white again
+                }
+                k++;   
             }
         }
     }
 
-    for (int i = 0; i < j; i++){
-            printf("arr[%d] = (%d, %d)\n", i, arrOfPoints[i][0], arrOfPoints[i][1]);
-    }
-
-    int duplicate;
-    int blacks = 0;
-    for (int i = 0; i < j; i++){
-        duplicate = 0;
-        for (int k = 0; k < j; k++){
-            if (i != k && arrOfPoints[i][0] == arrOfPoints[k][0] && arrOfPoints[i][1] == arrOfPoints[k][1]){
-                duplicate += 1; 
+    for (int i = 0; i < 200; i++) {
+        for (int j = 0; j < 200; j++){
+            if (arrOfPoints[i][j] == 1){
+                blacks += 1;
             }
-        }
-        if (duplicate%2 == 0){
-            printf("arr[%d] = (%d, %d)\n", i, arrOfPoints[i][0], arrOfPoints[i][1]);
-            blacks++;
         }
     }
 
     printf("black squares: %d", blacks);
+    return 0;
 }
