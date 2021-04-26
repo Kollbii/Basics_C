@@ -64,17 +64,18 @@ int is_divisable_by_two_and_three(int **arr, int n){
 }
 
 int test_divide(int n){
-    int **T = (int **)malloc(sizeof(int*)*(unsigned)n);
+    double **T = (double **)malloc(sizeof(double*)*(unsigned)n);
     for (int i = 0; i < n; i++){
-        T[i] = (int *)malloc(sizeof(int)*(unsigned)n);
+        T[i] = (double *)malloc(sizeof(double)*(unsigned)n);
         for (int j = 0; j < n; j++){
             if ( (i + j) % 2 != 0){
-                T[i][j]
+                T[i][j] = rand() % 101;
+            } else {
+                T[i][j] = (i + j)/(i*j + 1);
             }
-            T[i][j] = rand() % 101; 
         }
     }
-
+    printf("Sum of divisable by 2 and 3 -> %d\n", is_divisable_by_two_and_three((int **)T, n));
     return 0;
 }
 
@@ -108,5 +109,11 @@ int main(void){
     }
 
     printf("Sum of divisable by 2 and 3 -> %d\n", is_divisable_by_two_and_three(T, m));
+
+    int l;
+    printf("Insert test value for test_divide()\n>");
+    scanf("%d", &l);
+    test_divide(l);
+
     return 0;
 }
