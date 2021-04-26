@@ -1,2 +1,2 @@
-# pdst_progr_C
+# Basics_C
 Basics of C language. 
