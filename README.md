@@ -1,2 +1,2 @@
 # pdst_progr_C
-Podstawy programowania z C.
+Basics of C language. 
