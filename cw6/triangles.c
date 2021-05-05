@@ -23,8 +23,8 @@ int main(void){
     printf(">");
     scanf("%d %d", &points, &lines);
 
-    int **arr = (int **)malloc(sizeof(int*)*(unsigned)lines);
-    for (int i = 0; i < lines; i++){
+    int **arr = (int **)malloc(sizeof(int*)*(unsigned)(points + 1));
+    for (int i = 0; i <= points; i++){
         arr[i] = (int *)malloc(sizeof(int)*2);
         for (int j = 0; j < 2; j++){
             arr[i][j] = 0;
