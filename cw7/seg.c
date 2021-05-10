@@ -2,12 +2,15 @@
 #include <stdlib.h>
 
 /*
+Dla danych wejsciowych:
 5 2
 8 1 0 1 0
 2 3 4 7 1
 2 7 4 0 1
 1 8 5 1 4
 0 1 6 3 9
+poprawna odpowiedzia jest:
+17
 */
 void printArr(int *arr[], int n);
 int getValueOfIndex(int *arr[], int n, int i, int j, int k);
@@ -21,11 +24,13 @@ void printArr(int *arr[], int n){
 }
 
 int getValueOfIndex(int *arr[], int n, int i, int j, int k){
-    int sum = 0;
-    /*  Check line vertical*/
+    int sum_max = 0, sum1 = 0, sum2 = 0, sum3 = 0, sum4 = 0;
+
+    /*  Check Horizontal*/
     
-    for (int x = i - k + 1; x < k; x++){
-        sum += arr[x][j];
+    for (int x = 0; x < k; x++){
+        
+        sum1 += arr[x][j];
     }
 }
 

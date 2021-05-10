@@ -57,10 +57,12 @@ int main(void){
         printf("-1");
         return -1;
     }
-
+    
+    /* Print initial array with 0's */
+    printArr(arr, n);
 
     int flag = 0;
-    while (k--){
+    while ((k-- - 1)){
         flag = addOne(arr, n);
         if(flag == 1){
             k++;
