@@ -1,2 +1,3 @@
-# Basics_C
-Basics of C language. 
+# Basics of C language
+
+Basily math task combined with some olimpic ones.
