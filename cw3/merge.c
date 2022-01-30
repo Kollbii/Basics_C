@@ -62,7 +62,6 @@ void quick_sort(int arr[ARRSIZE], int floor, int roof){
         quick_sort(arr, floor, j - 1);
         quick_sort(arr, j + 1, roof);
     }
-    // printarr(arr, roof);
 }
 
 int remove_duplicates(int arr[], int n){

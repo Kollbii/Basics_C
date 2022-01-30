@@ -46,9 +46,7 @@ void printArr(int *arr[], int n){
 
 int getValueOfIndex(int *arr[], int n, int i, int j, int k){
     int sum_max = 0, current_sum = 0;
-
     /*  Check all ways  */
-    
     for (int x = 0; x < 8; x++){
         int index_i, index_j;
         switch(x){
@@ -237,7 +235,6 @@ int main(void){
             max_current = getValueOfIndex(arr, n, i, j, k);
             if (max_current > max){
                 max = max_current;
-                // printf("%d\n", max_current);
             }
         }
     }

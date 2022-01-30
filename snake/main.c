@@ -103,27 +103,6 @@ int main(void){
     
     setup();
     
-    // if(kbhit()){
-    //     switch(getch()){
-    //         case 'w':
-    //             flag = 1;
-    //             break;
-    //         case 'a':
-    //             flag = 2;
-    //             break;
-    //         case 's':
-    //             flag = 3; 
-    //             break;
-    //         case 'd':
-    //             flag = 4;
-    //             break;
-    //         case 'x':
-    //             gameover = 1;
-    //             break;
-    //     }
-    // }
-    
-
     while(gameover != 1){
         draw();
         input();

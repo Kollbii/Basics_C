@@ -85,9 +85,7 @@ int main(void){
     }
 
     printf("\n");
-    // printArr(T, n);
     printf("\n");
-    // printArr(P, k);
     
     /*  For each index check it's max sum*/
     int sum_max = 0, sum_current = 0;
@@ -98,14 +96,9 @@ int main(void){
             if (i + k > n || j + l > n)
                 continue;
             
-            
             sum_current = checkSubArr(i, j, n, k, l, T, P);
-            // printf("Sum -> %d\n", sum_current);
-
             if (sum_current > sum_max)
                 sum_max = sum_current;
-
-            // printf("Current max: %d\n", sum_max);
         }
     }
 

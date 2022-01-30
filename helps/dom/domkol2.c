@@ -14,9 +14,9 @@ o                       o
 */
 
 /*
-    o - on diagonal 
-    o - on reverse diagonal // i + j == n - 1
-    o - where i + j >= n && i <= n/2 && j >= n/2 and  i + j <= n - 1 && i >= n/2  && j < n/2
+o - on diagonal 
+o - on reverse diagonal // i + j == n - 1
+o - where i + j >= n && i <= n/2 && j >= n/2 and  i + j <= n - 1 && i >= n/2  && j < n/2
 
 */
 int main(void){
@@ -44,9 +44,7 @@ int main(void){
         }
     }
     
-    /*
-        Print nicely :)
-    */
+    /*Print nicely :)*/
     for (int i = 0; i < n; i++){
         for(int j = 0; j < n; j++){
             if (j + 1 == n){

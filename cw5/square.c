@@ -13,13 +13,10 @@ void printArr(int **arr, int n){
 }
 
 int sumOnBorder(int **arr, int n, int i, int j, int radius){
-    // printf("good pass of radius = %d at center arr[%d][%d]\n", radius, i, j);
     int sum_on_border = 0;
     int left_limit, right_limit, up_limit, down_limit;
 
-    /*
-    Set border
-    */
+    /*Set border*/
     left_limit = j - radius;
     right_limit = j + radius;
     up_limit = i - radius;
@@ -68,22 +65,16 @@ int main(void){
 
     for (int i = 0; i < n; i++){
         for(int j = 0; j < n; j++){
-            /*
-            Calculate for each possible radius in [1; ⌊n/2⌋]
-            */
+            /*Calculate for each possible radius in [1; ⌊n/2⌋]*/
             for(int k = 1; k < n/2 + 1; k++){
                 int sum;
-                /*
-                Pass only 'centers' that are in radius to sumOnBorder()
-                */
+                /*Pass only 'centers' that are in radius to sumOnBorder()*/
                 if (((i - k) >= 0) && ((i + k) < n) && ((j - k) >= 0) && ((j + k) < n)){
                     sum = sumOnBorder(arr, n, i, j, k);
-                    // printf("Sum for arr[%d][%d] = %d\n",i,j,sum);
                     if(sum == sum_to_find){
                         answer[counter][0] = i;
                         answer[counter][1] = j;
                         counter++;
-                        // printf("%d %d\n", i, j);
                     }
                 }
             }

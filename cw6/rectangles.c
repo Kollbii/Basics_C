@@ -34,8 +34,8 @@ int main(void){
     scanf("%d", &rectangles);
     
     /*
-        I translate the (0,0) to (n/2,n/2) [lines 57-61]
-        in order to maintain >= 0 indexes in array.
+    I translate the (0,0) to (n/2,n/2) [lines 57-61]
+    in order to maintain >= 0 indexes in array.
     */
 
     int **arrOfPoints = (int**)malloc(sizeof(int*)*(unsigned)200);

@@ -16,12 +16,12 @@ int get_num_in_dec(char arr[]){
     int num = 0;
     for (int i = 0; i < ARRSIZE; i++){
         /*
-            Input specified.
-            Check only capital letters in alphabet.
+        Input specified.
+        Check only capital letters in alphabet.
         */
         if(arr[i] >= 65 && arr[i] <= 90){
             /*
-                Watch out for CM, CD, XC, XL, IX, IV
+            Watch out for CM, CD, XC, XL, IX, IV
             */
             switch((char)arr[i]){
                 case 'M':
@@ -96,13 +96,9 @@ int get_num_in_dec(char arr[]){
 }
 
 void convert_to_roman(int num){
-    /*
-        Idea with array saved for future.
-    */
-    // char arr[ARRSIZE];
+    /*Idea with array saved for future.*/
     int i = 0;
     while (num != 0){
-        //Switch idea(?)
         if (num >= 1000){
             printf("M");
             // arr[i] = 'M';
@@ -170,7 +166,6 @@ void convert_to_roman(int num){
             i++;
         }
     }
-    // return arr;
 }
 
 int main(void){

@@ -4,7 +4,6 @@
 
 int func(int x){
     if ((x%10)%2 != 0){
-        // printf("%d jest znaleziona liczba nieparzysta\n", x%10); //Może koniec tutaj bo "pierwsza" ale od końca (?)
         return x%10;
     } else {
         if (x/10 == 0 ){

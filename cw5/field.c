@@ -15,11 +15,10 @@ int checkRightCap(int **arr, int i, int j, int n){
 void calculateMaxField(int **arr, int i, int j, int n){
     int right_cap = n;
     int max = 0;
-    // printf("passed arr[%d][%d] with len %d\n", i, j, n);
 /*
-    Iterate down and find first 1.
-    Find lowest right_cap.
-    Multiply.
+Iterate down and find first 1.
+Find lowest right_cap.
+Multiply.
 */
     int dy = 0, dx = n;
     for (int k = 0; k < n; k++){
@@ -39,9 +38,7 @@ void calculateMaxField(int **arr, int i, int j, int n){
         if(dx*dy > max){
             max = dx*dy;
         }
-        // printf("arr[%d][%d] %d \twith dx = %d dy = %d\n",i,j,dx*dy,dx,dy);
     }
-    // printf("arr[%d][%d] = %d\n", i, j, max);
     arr[i][j] = max;
 }
 
@@ -61,15 +58,14 @@ int main(void){
 
     printf("\n");
 /*
-    Print matrix with max field of submatrix at given index
-    Take max element from it.
+Print matrix with max field of submatrix at given index
+Take max element from it.
 */
     for (int i = 0; i < n; i++){
         for (int j = 0; j < n; j++){
             if (arr[i][j] != 1){
                 calculateMaxField(arr, i, j, n);
             }
-            // j + 1 == n ? printf("%d\n", arr[i][j]) : printf("%d ", arr[i][j]);
             if(arr[i][j] > max){
                 max = arr[i][j];
             }

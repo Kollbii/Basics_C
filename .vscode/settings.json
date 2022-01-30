@@ -10,6 +10,8 @@
         "istream": "c",
         "ostream": "c",
         "tuple": "c",
-        "utility": "c"
+        "utility": "c",
+        "string.h": "c",
+        "windows.h": "c"
     }
 }

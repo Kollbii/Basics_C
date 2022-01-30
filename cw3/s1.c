@@ -5,8 +5,9 @@
 #define size 100
 
 void sortowanie(int arr[size], int n); //n - wielkosc tablicy
-void sortowanie(int arr[size], int n){
+void wypisanie_tablicy(int arr[size] , int n);
 
+void sortowanie(int arr[size], int n){
     int zmiana;
     for (int i = 0 ; i < n; i++) {
         for (int j = 0 ; j < n; j++){
@@ -17,21 +18,16 @@ void sortowanie(int arr[size], int n){
             }
         }
     }
-
     printf("Posortowana tablica:\n");
-
     for (int i = 0; i < n; i++)
         printf("%d ", arr[i]);
 
 }
-void wypisanie_tablicy(int arr[size] , int n);
 void wypisanie_tablicy(int arr[size] , int n){
-    
     for (int i = 0; i < n; i++){
         printf("%d ", arr[i]);
     }
     printf("\n");
-
 }
 
 int main(void) {
@@ -55,8 +51,6 @@ int main(void) {
     }
     printf("Twoja druga tablica: ");
     wypisanie_tablicy(tablica2, wielkosc2);
-
-
-
+    
     return 0;
 }
